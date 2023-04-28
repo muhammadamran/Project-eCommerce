@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="295" height="257" viewBox="0 0 295 257">
+  <defs>
+    <clipPath id="clip-icon">
+      <rect width="295" height="257"/>
+    </clipPath>
+  </defs>
+  <g id="icon" clip-path="url(#clip-icon)">
+    <rect width="295" height="257" fill="rgba(255,255,255,0)"/>
+    <text id="H" transform="translate(34 236)" fill="#050d28" font-size="276" font-family="Istanbul"><tspan x="0" y="0">H</tspan></text>
+  </g>
+</svg>

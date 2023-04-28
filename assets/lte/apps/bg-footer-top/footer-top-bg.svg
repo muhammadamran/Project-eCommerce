@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1152" height="134" viewBox="0 0 1152 134">
+  <defs>
+    <clipPath id="clip-footer-top-bg">
+      <rect width="1152" height="134"/>
+    </clipPath>
+  </defs>
+  <g id="footer-top-bg" clip-path="url(#clip-footer-top-bg)">
+    <rect width="1152" height="134" fill="#fff"/>
+    <rect id="Image_1" data-name="Image 1" width="1152" height="220" fill="#7d7d7d"/>
+  </g>
+</svg>

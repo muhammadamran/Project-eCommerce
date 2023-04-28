@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1152" height="134" viewBox="0 0 1152 134">
+  <defs>
+    <clipPath id="clip-menu-bg">
+      <rect width="1152" height="134"/>
+    </clipPath>
+  </defs>
+  <g id="menu-bg" clip-path="url(#clip-menu-bg)">
+    <rect width="1152" height="134" fill="#fff"/>
+    <rect id="Image_1" data-name="Image 1" width="1152" height="220" fill="#fba919"/>
+  </g>
+</svg>
