@@ -15,9 +15,14 @@ class Ltehome extends CI_Controller
 		$dataUsers = $this->Users_model->get_users();
 		$x['data'] = $dataUsers;
 
-		$this->load->view('include-web/head', $h);
-		$this->load->view('include-web/top-header', $th);
+		$this->load->view('include-lte/head', $x);
+		// $this->load->view('include-lte/cssTable', $x);
+		$this->load->view('include-lte/top-header', $x);
+		$this->load->view('include-lte/sidebar', $x);
 		$this->load->view('home', $x);
-		$this->load->view('include-web/footer', $f);
+		$this->load->view('include-lte/activity', $x);
+		$this->load->view('include-lte/panel', $x);
+		// $this->load->view('include-lte/jsTable', $x);
+		$this->load->view('include-lte/footer', $x);
 	}
 }

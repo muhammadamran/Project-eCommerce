@@ -13,7 +13,7 @@
                                 <div class="contact-form-wrap">
                                     <h2 class="contact__title">Create An Account</h2>
                                     <p>Silahkan Create An Account anda disini dan akan aktif sebagai member untuk melakukan pemesanan. </p>
-                                    <form action="<?= base_url('w_home/create_account'); ?>" method="post">
+                                    <form action="<?= base_url('whome/create_account'); ?>" method="post">
                                         <div class="single-contact-form space-between">
                                             <input type="text" name="nama_depan" placeholder="Nama Depan*">
                                             <input type="text" name="nama_belakang" placeholder="Nama Belakang*">

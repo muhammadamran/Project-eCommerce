@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-4 col-7 col-lg-2">
                 <div class="logo">
-                    <a href="<?= base_url() . "w_home"; ?>">
+                    <a href="<?= base_url() . "whome"; ?>">
                         <img src="<?= base_url('assets/apps/logo/logo-white.png'); ?>" class="logo-tp" alt="Logo Header">
                     </a>
                 </div>
@@ -11,8 +11,8 @@
             <div class="col-lg-8 d-none d-lg-block">
                 <nav class="mainmenu__nav">
                     <ul class="meninmenu d-flex justify-content-start">
-                        <li class="drop with--one--item"><a href="<?= base_url() . "w_home"; ?>">Home</a></li>
-                        <li class="drop with--one--item"><a href="<?= base_url() . "w_catalog"; ?>">Catalog</a></li>
+                        <li class="drop with--one--item"><a href="<?= base_url() . "whome"; ?>">Home</a></li>
+                        <li class="drop with--one--item"><a href="<?= base_url() . "wcatalog"; ?>">Catalog</a></li>
                         <li><a href="<?= base_url() . "w_tentangkami"; ?>">About US</a></li>
                     </ul>
                 </nav>
@@ -106,7 +106,7 @@
                                             <div class="switcher-currency-trigger">
                                                 <div class="setting__menu">
                                                     <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
-                                                    <span><a href="<?= base_url() ?>w_home/logout" title="Log Out">Log Out</a></span>
+                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
                                                 <div class="setting__menu">
                                                     <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
                                                     <span><a href="<?= base_url() ?>home" target="_blank" title="Home">Admin LTE</a></span>
-                                                    <span><a href="<?= base_url() ?>w_home/logout" title="Log Out">Log Out</a></span>
+                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +138,7 @@
                                                 <div class="setting__menu">
                                                     <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
                                                     <span><a href="<?= base_url() ?>home" target="_blank" title="Home">Admin LTE</a></span>
-                                                    <span><a href="<?= base_url() ?>w_home/logout" title="Log Out">Log Out</a></span>
+                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,7 +156,7 @@
             <div class="col-lg-12 d-none">
                 <nav class="mobilemenu__nav">
                     <ul class="meninmenu">
-                        <li><a href="<?= base_url() . "w_home"; ?>">Home</a></li>
+                        <li><a href="<?= base_url() . "whome"; ?>">Home</a></li>
                         <li><a href="#">Atasan</a>
                             <ul>
                                 <li><a href="<?= base_url() . "w_shop/kemeja"; ?>">Kemeja</a>
