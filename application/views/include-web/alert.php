@@ -56,3 +56,62 @@
 		});
 	</script>
 <?php endif; ?>
+
+<!-- start_session -->
+<?php if ($this->session->flashdata('start_session')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Information!',
+			html: '<font style="font-size: 16px;font-weight: 400;">You didnt have access!</font>',
+			imageUrl: '<?= base_url('assets/apps/alert/info.gif') ?>',
+			// icon: 'success',
+			// imageWidth: 400,
+			imageHeight: 200,
+			// imageAlt: 'Custom image',
+		});
+	</script>
+<?php endif; ?>
+
+<!-- SUCCESS -->
+<!-- success_alert -->
+<?php if ($this->session->flashdata('success_alert')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Success!',
+			html: '<font style="font-size: 16px;font-weight: 400;">Data saved successfully! ✔</font>',
+			imageUrl: '<?= base_url('assets/apps/alert/success.gif') ?>',
+			// icon: 'success',
+			// imageWidth: 400,
+			imageHeight: 200,
+			// imageAlt: 'Custom image',
+		});
+	</script>
+<?php endif; ?>
+<!-- unsuccess_alert -->
+<?php if ($this->session->flashdata('unsuccess_alert')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Failed!',
+			html: '<font style="font-size: 16px;font-weight: 400;">Data saved unsuccessfully! ❌</font>',
+			imageUrl: '<?= base_url('assets/apps/alert/failed.gif') ?>',
+			// icon: 'success',
+			// imageWidth: 400,
+			imageHeight: 200,
+			// imageAlt: 'Custom image',
+		});
+	</script>
+<?php endif; ?>
+<!-- check_file_type -->
+<?php if ($this->session->flashdata('check_file_type')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Information!',
+			html: '<font style="font-size: 16px;font-weight: 400;">File type must be PNG, JPG, JPEG, GIF or SVG ❗</font>',
+			imageUrl: '<?= base_url('assets/apps/alert/info.gif') ?>',
+			// icon: 'success',
+			// imageWidth: 400,
+			imageHeight: 200,
+			// imageAlt: 'Custom image',
+		});
+	</script>
+<?php endif; ?>

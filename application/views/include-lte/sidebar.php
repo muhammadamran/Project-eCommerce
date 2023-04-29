@@ -1,6 +1,7 @@
 <style>
     .sidebar .nav>li.nav-profile .cover {
-        background: url(<?= base_url('assets/apps/background/background-sidebar.gif') ?>);
+        /* background: url(<?= base_url('assets/apps/background/background-sidebar.gif') ?>); */
+        background: url(<?= base_url('assets/apps/background/3.jpg') ?>);
         background-repeat: no-repeat;
         background-size: cover
     }
@@ -62,7 +63,7 @@
                 </ul>
             </li>
             <li class="nav-header">CMS Information</li>
-            <li class="">
+            <li class="<?= $this->uri->segment(1) == "ltesetting" ? "active" : ""; ?>">
                 <a href="<?= base_url('ltesetting'); ?>">
                     <i class="fa-solid fa-gears icon-page-sidebar"></i>
                     <span>Setting</span>

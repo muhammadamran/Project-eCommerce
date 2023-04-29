@@ -7,7 +7,7 @@
     <meta name="seodesc" content="seodesc">
     <meta name="seodesc" content="seodesc">
     <link rel="shortcut icon" href="<?= base_url('assets/apps/icon/' . $lte_icon); ?>">
-    <title>CMS <?= $lte_title ?> | <?= $lte_companyname ?></title>
+    <title><?= $page ?> - CMS <?= $lte_title ?> | <?= $lte_companyname ?></title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="<?= base_url('assets/lte/css/default/app.min.css'); ?>" rel="stylesheet" />
     <link href="<?= base_url('assets/lte/plugins/jvectormap-next/jquery-jvectormap.css'); ?>" rel="stylesheet" />

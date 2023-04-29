@@ -1,7 +1,7 @@
 <!-- begin theme-panel -->
 <div class="theme-panel theme-panel-lg">
     <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn">
-        <div style="margin-top: 6px;">
+        <div style="margin-top: 0px;">
             <i class="fa fa-cog"></i>
         </div>
     </a>
@@ -70,7 +70,7 @@
         <div class="divider"></div>
         <div class="row m-t-10">
             <div class="col-md-12">
-                <a href="https://seantheme.com/color-admin/documentation/" class="btn btn-inverse btn-block btn-rounded" target="_blank"><b>Documentation</b></a>
+                <!-- <a href="https://seantheme.com/color-admin/documentation/" class="btn btn-inverse btn-block btn-rounded" target="_blank"><b>Documentation</b></a> -->
                 <a href="javascript:;" class="btn btn-default btn-block btn-rounded" data-click="reset-local-storage"><b>Reset Local Storage</b></a>
             </div>
         </div>

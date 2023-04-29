@@ -13,7 +13,10 @@
                     <ul class="meninmenu d-flex justify-content-start">
                         <li class="drop with--one--item"><a href="<?= base_url() . "whome"; ?>">Home</a></li>
                         <li class="drop with--one--item"><a href="<?= base_url() . "wcatalog"; ?>">Catalog</a></li>
-                        <li><a href="<?= base_url() . "w_tentangkami"; ?>">About US</a></li>
+                        <li class="drop with--one--item"><a href="http://kn-idcore.ap.win.int.kn/" target="_blank">KN IDCore</a></li>
+                        <li class="drop with--one--item"><a href="https://connections.mykn.community/" target="_blank">Connections</a></li>
+                        <li class="drop with--one--item"><a href="https://learning.int.kn" target="_blank">Learning</a></li>
+                        <li class="drop with--one--item"><a href="https://careerexplorer.kuehne-nagel.com" target="_blank">Career Explorer</a></li>
                     </ul>
                 </nav>
             </div>
@@ -81,11 +84,11 @@
                     <!-- END KERANJANG -->
                     <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
                         <?php if ($this->session->userdata('user_mail') != NULL) { ?>
-                            <?php
-                            $num_char = 12;
-                            $text = $this->session->userdata('user_full_name');
-                            ?>
-                            <font style="color:#fff"><?= substr($text, 0, $num_char) . '...'; ?></font>
+                            <!-- <?php
+                                    $num_char = 12;
+                                    $text = $this->session->userdata('user_full_name');
+                                    ?>
+                            <font style="color:#fff"><?= substr($text, 0, $num_char) . '...'; ?></font> -->
                         <?php } else { ?>
                         <?php } ?>
                         <div class="searchbar__content setting__block">
@@ -94,6 +97,19 @@
                                     <div class="switcher-currency">
                                         <strong class="label switcher-label">
                                             <span>SIGN IN/SIGN OUT</span>
+                                            <?php if ($this->session->userdata('user_mail') != NULL) { ?>
+                                                <hr>
+                                                <?php
+                                                $myString = $this->session->userdata('user_name');
+                                                $FL    = explode('.', $myString);
+                                                $F     = $FL[0];
+                                                $L     = $FL[1];
+                                                $showU = substr($F, 0, 1) . "" . substr($L, 0, 1);
+                                                $showD = "<font style='text-transform: capitalize;'>$L</font>, <font style='text-transform: capitalize;'>$F / Kuehne + Nagel</font>";
+                                                ?>
+                                                <?= $showD ?>
+                                            <?php } else { ?>
+                                            <?php } ?>
                                         </strong>
                                         <div class="switcher-options">
                                             <div class="switcher-currency-trigger">
