@@ -6,8 +6,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eCommerce</title>
-  <link rel="shortcut icon" href="<?= base_url('assets/apps/icon/icon.png'); ?>">
+  <title><?= $web_title ?> | <?= $web_companyname ?></title>
+  <link rel="shortcut icon" href="<?= base_url('assets/apps/icon/' . $web_icon); ?>">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -37,11 +37,11 @@ function buatRupiah($angka)
 ?>
 <div class="preloader">
   <div class="loading">
-    <img src="<?= base_url('assets/apps/icon/icon.png'); ?>" width="100">
+    <img src="<?= base_url('assets/apps/loader/' . $web_loader); ?>" width="100">
     <br>
     <p>
       <b>
-        <font style="font-family: 'Poppins', sans-serif; color:#1e3135;margin-left: 10px;">Please wait ..</font>
+        <font style="font-family: 'Poppins', sans-serif; color:#1e3135;margin-left: 10px;"><?= $web_text_loader ?></font>
       </b>
     </p>
   </div>

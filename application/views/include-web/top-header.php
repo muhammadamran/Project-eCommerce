@@ -4,7 +4,7 @@
             <div class="col-md-4 col-sm-4 col-7 col-lg-2">
                 <div class="logo">
                     <a href="<?= base_url() . "whome"; ?>">
-                        <img src="<?= base_url('assets/apps/logo/logo-white.png'); ?>" class="logo-tp" alt="Logo Header">
+                        <img src="<?= base_url('assets/apps/logo/' . $web_logo_1); ?>" class="logo-tp" alt="Logo Header">
                     </a>
                 </div>
             </div>
@@ -80,6 +80,14 @@
                     </li>
                     <!-- END KERANJANG -->
                     <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+                        <?php if ($this->session->userdata('username') != NULL) { ?>
+                            <?php
+                            $num_char = 12;
+                            $text = 'amran.siregar@kuehne-nagel.com';
+                            ?>
+                            <font style="color:#fff"><?= substr($text, 0, $num_char) . '...'; ?></font>
+                        <?php } else { ?>
+                        <?php } ?>
                         <div class="searchbar__content setting__block">
                             <div class="content-inner">
                                 <?php if ($this->session->userdata("role") == NULL) { ?>

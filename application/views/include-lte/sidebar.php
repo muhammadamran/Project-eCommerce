@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li class="nav-header">Navigation</li>
-            <li class="">
+            <li class="<?= $this->uri->segment(1) == "ltehome" ? "active" : ""; ?>">
                 <a href="index.php">
                     <i class="fa-solid fa-cubes-stacked icon-page-sidebar"></i>
                     <span>Dashboard</span>

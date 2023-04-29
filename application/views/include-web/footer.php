@@ -3,10 +3,10 @@
 		<div class="row">
 			<div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
 				<div class="section__title text-center">
-					<h2 style="color:#fff">Tetaplah bersama kami</h2>
+					<h2 style="color:#fff"><?= $web_subscribe_title ?></h2>
 				</div>
 				<div class="newsletter__block text-center">
-					<p style="color:#fff">Berlangganan buletin kami sekarang dan ikuti perkembangan terbaru dengan koleksi baru, lookbook terbaru, dan penawaran eksklusif.</p>
+					<p style="color:#fff"><?= $web_subscribe_paragraph ?></p>
 					<form action="#">
 						<div class="newsletter__box">
 							<style>
@@ -15,7 +15,7 @@
 									opacity: 1;
 								}
 							</style>
-							<input type="email" style="color:#fff" placeholder="Enter your e-mail">
+							<input type="email" style="color:#fff" placeholder="Enter your e-mail" required>
 							<button style="color:#fff">Subscribe</button>
 						</div>
 					</form>
@@ -32,7 +32,7 @@
 					<div class="footer__widget footer__menu">
 						<div class="ft__logo">
 							<a href="">
-								<img src="<?= base_url('assets/apps/logo/logo-blue.png'); ?>" class="footer-logo" alt="logo">
+								<img src="<?= base_url('assets/apps/logo/' . $web_logo_2); ?>" class="footer-logo" alt="logo Footer">
 							</a>
 							<!-- <p>Slogan</p> -->
 						</div>
@@ -57,7 +57,7 @@
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<div class="copyright">
 						<div class="copy__right__inner text-left">
-							<p>Copyright <i class="fa fa-copyright"></i> 2021-<?= date('Y'); ?> <a href="mailto:" style="color:#0099DA" target="_blank">Powered by. M x M | </a> All Rights Reserved</p>
+							<p>Copyright <i class="fa fa-copyright"></i> 2021-<?= date('Y'); ?> <a href="mailto:<?= $web_email ?>" style="color:#0099DA" target="_blank"><?= $web_footer ?> | </a> All Rights Reserved</p>
 						</div>
 					</div>
 				</div>

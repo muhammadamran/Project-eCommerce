@@ -13,7 +13,7 @@
                             <div class="col-lg-12 col-12">
                                 <div class="contact-form-wrap">
                                     <p>Please enter the email and password that you created.</p>
-                                    <form action="<?= base_url('whome/aksi_login'); ?>" method="post">
+                                    <form action="<?= base_url('whome/action_login'); ?>" method="post">
                                         <div class="single-contact-form space-between">
                                             <input type="email" name="username" placeholder="Email*">
                                             <input type="password" name="password" id="password" placeholder="Password*">

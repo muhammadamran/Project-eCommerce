@@ -6,7 +6,18 @@
 <?= $this->session->flashdata('notif_keranjang') ?>
 <?= $this->session->flashdata('notif_hapus_keranjang') ?>
 <!-- New Product -->
+<style>
+    .header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?= base_url('assets/apps/banner/' . $web_banner); ?>');
+    }
+</style>
 <div style="margin-top:80px"></div>
+<div class="header">
+    <div class="section__title text-center">
+        <h2 style="color:#fff"><?= $web_banner_title ?></h2>
+    </div>
+    <font style="font-size:18px"><?= $web_banner_paragraph ?></font>
+</div>
 <section class="wn__product__area brown--color pt--80  pb--30">
     <!-- BOX Animation -->
     <div class="cube"></div>
@@ -33,7 +44,7 @@
                             <img src="<?= base_url('assets/website/product/2_1610441072.jpg'); ?>" alt="product image">
                         </a>
                         <a class='second__img animation1' href='#'>
-                            <img src="<?= $BackgroundItem; ?>" alt="product image">
+                            <img src="<?= base_url('assets/website/product/cover/' . $web_cover); ?>" alt="product image">
                         </a>
                     </div>
                     <div class="product__content content--center">
@@ -113,7 +124,7 @@
                                     <img src="<?= base_url('assets/website/product/2_1610441072.jpg'); ?>" alt="product image">
                                 </a>
                                 <a class='second__img animation1' href='#'>
-                                    <img src="<?= $BackgroundItem; ?>" alt="product image">
+                                    <img src="<?= base_url('assets/website/product/cover/' . $web_cover); ?>" alt="product image">
                                 </a>
                             </div>
                             <div class="product__content content--center">
