@@ -25,15 +25,9 @@ class Users_model extends CI_Model
         $dbUsers->insert($table, $data);
     }
 
-    function input_log($table, $data)
-    {
-        $dbUsers = $this->load->database('users', TRUE);
-        $dbUsers->insert($table, $data);
-    }
-
     public function ready_user($username)
     {
         $dbUsers = $this->load->database('users', TRUE);
-        return $dbUsers->query("SELECT * FROM tb_book_user WHERE user_name='$username'")->result();
+        return $dbUsers->query("SELECT * FROM tb_book_user WHERE user_mail='$username'")->result();
     }
 }

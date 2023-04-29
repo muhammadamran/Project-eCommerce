@@ -15,8 +15,8 @@
                                     <p>Please enter the email and password that you created.</p>
                                     <form action="<?= base_url('whome/action_login'); ?>" method="post">
                                         <div class="single-contact-form space-between">
-                                            <input type="email" name="username" placeholder="Email*">
-                                            <input type="password" name="password" id="password" placeholder="Password*">
+                                            <input type="email" name="user_mail" placeholder="Email">
+                                            <input type="password" name="user_pass" id="password" placeholder="Password">
                                         </div>
                                         <div class="checkbox checkbox-css" style="margin-top: -30px;margin-bottom: 30px;margin-left: 233px;">
                                             <input type="checkbox" id="ckb1" onclick="myFunction()" />

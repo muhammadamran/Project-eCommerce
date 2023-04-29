@@ -55,15 +55,11 @@ class Whome extends CI_Controller
 		}
 		// End Setting
 
-		// IMAGES COVER 2 PRODUCT
-		$x['BackgroundItem'] = 'assets/website/product/cover/bg-blue.svg';
-		// END IMAGES COVER 2 PRODUCT 
-
 		$dataUsers = $this->Users_model->get_users();
-		$x['title'] = $dataUsers;
 		$x['data'] = $dataUsers;
 
 		$this->load->view('include-web/head', $x);
+		$this->load->view('include-web/alert', $x);
 		$this->load->view('include-web/top-header', $x);
 		$this->load->view('home', $x);
 		$this->load->view('include-web/footer', $x);
@@ -75,49 +71,61 @@ class Whome extends CI_Controller
 	public function action_login()
 	{
 		if (isset($_POST['submit'])) {
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
+			$user_mail = $this->input->post('user_mail');
+			$user_pass = $this->input->post('user_pass');
 
 			$data = array(
-				'username' => $username,
-				'password' => $password
+				'user_mail' => $user_mail,
+				'user_pass' => $user_pass
 			);
 
-			$cek = $this->home_model->cek_login('tbl_users', $data);
-			$perusahaan = $this->home_model->perusahaan('tbl_users', $data);
+			$check = $this->Users_model->check_login('tb_book_user', $data);
 
-			if (@$cek) {
+			if (@$check) {
 
 				$data_session = array(
-					'icon' => $perusahaan[0]->logo,
-					'nama_perusahaan' => $perusahaan[0]->nama_perusahaan,
-					'id_user' => $cek->id_user,
-					'username' => $username,
-					'password' => $password,
-					'email' => $cek->email,
-					'nama_depan' => $cek->nama_depan,
-					'nama_belakang' => $cek->nama_belakang,
-					'no_hp' => $cek->no_hp,
-					'image' => $cek->image,
-					'role' => $cek->role,
-					'status' => $cek->status,
-					'created_at' => $cek->created_at
-				);
-
-				$data_log = array(
-					'username' => $username,
-					'role_akses' => $cek->role,
-					'login_datetime' => date('Y-m-d H:i:s'),
-					'status' => 'Login'
+					'id' => $check->id,
+					'user_name' => $check->user_name,
+					'user_pass' => $check->user_pass,
+					'user_role' => $check->user_role,
+					'user_dept' => $check->user_dept,
+					'user_mail' => $check->user_mail,
+					'user_nik' => $check->user_nik,
+					'user_full_name' => $check->user_full_name,
+					'user_cc' => $check->user_cc,
+					'user_code' => $check->user_code,
+					'user_in' => $check->user_in,
+					'user_sex' => $check->user_sex,
+					'user_last_quota' => $check->user_last_quota,
+					'remark_1' => $check->remark_1,
+					'user_quota' => $check->user_quota,
+					'remark_2' => $check->remark_2,
+					'user_bonus' => $check->user_bonus,
+					'remark_3' => $check->remark_3,
+					'pre_1' => $check->pre_1,
+					'remark_4' => $check->remark_4,
+					'pre_2' => $check->pre_2,
+					'remark_5' => $check->remark_5,
+					'user_image' => $check->user_image,
+					'user_phone' => $check->user_phone,
+					'branch_number' => $check->branch_number,
+					'ext_number' => $check->ext_number,
+					'kn_code' => $check->kn_code,
+					'twitter' => $check->twitter,
+					'facebook' => $check->facebook,
+					'linkedin' => $check->linkedin,
+					'google' => $check->google,
+					'user_address' => $check->user_address,
+					'user_status' => $check->user_status
 				);
 
 				$this->session->set_userdata($data_session);
-				$this->home_model->input_log('tbl_log', $data_log);
-				$this->session->set_flashdata('notif_login_berhasil', '<script>alert("Hai, Anda Berhasil Login, Silahkan Kunjungi dan Pesan Produk Kami.");window.history.go(-1);</script>');
-				redirect('w_home/index');
+				$this->session->set_flashdata('notif_login_successfully', $this->input->post('user_mail'));
+
+				redirect('whome');
 			} else {
-				$this->session->set_flashdata('notif_login_gagal', '<script>alert("Maaf Email atau Password Anda Salah, Silahkan Coba Lagi.");window.history.go(-1);</script>');
-				redirect('w_home/index');
+				$this->session->set_flashdata('notif_login_unsuccessfully', 'You failed to login, please check your Email or Password!');
+				redirect('whome');
 			}
 		}
 	}

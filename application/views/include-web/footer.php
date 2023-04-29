@@ -10,12 +10,12 @@
 					<form action="#">
 						<div class="newsletter__box">
 							<style>
-								::placeholder {
+								#Subscribe::placeholder {
 									color: #fff;
 									opacity: 1;
 								}
 							</style>
-							<input type="email" style="color:#fff" placeholder="Enter your e-mail" required>
+							<input type="email" style="color:#fff" id="Subscribe" placeholder="Enter your e-mail" required>
 							<button style="color:#fff">Subscribe</button>
 						</div>
 					</form>
