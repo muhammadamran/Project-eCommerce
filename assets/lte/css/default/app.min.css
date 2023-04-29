@@ -26412,10 +26412,6 @@ body .introjs-bullets ul li a.active {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: url(images/cover-sidebar-user.jpg); */
-    background: url(../../../assets/apps/login/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover
 }
 
 .sidebar .nav>li.nav-profile .cover.with-shadow:before,

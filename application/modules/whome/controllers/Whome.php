@@ -22,6 +22,8 @@ class Whome extends CI_Controller
 			$x['web_title'] = 'Website Title';
 			// Company Name
 			$x['web_companyname'] = 'Company Name';
+			// App Name
+			$x['lte_appname'] = 'App Name';
 			// Logo 1
 			$x['web_logo_1'] = 'logo.png';
 			// Logo 2
@@ -47,11 +49,6 @@ class Whome extends CI_Controller
 			// Images Cover
 			$x['web_cover'] = 'hellos.svg';
 		} else {
-			// Icon
-			// Title
-			// Company Name
-			// Logo 1
-			// Logo 2
 		}
 		// End Setting
 
@@ -133,7 +130,7 @@ class Whome extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		$this->session->set_flashdata('notif_logout', '<script>alert("You Have Left Our Page Session, Thank You For Visiting Our Page. We are waiting for your return.");window.history.go(-1);</script>');
+		$this->session->set_flashdata('notif_logout', 'You Have Left Our Page Session, Thank You For Visiting Our Page. We are waiting for your return.');
 		redirect('whome');
 	}
 }

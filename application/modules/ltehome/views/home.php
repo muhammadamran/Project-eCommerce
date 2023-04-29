@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="title">
-                    <h4>🍳 Analysis Your Website Here</h4>
+                    <h4>🍳 Analysis Your Workspace</h4>
                 </div>
                 <nav aria-label="breadcrumb" role="navigation">
                     <ol class="breadcrumb">
                         <div style="font-size: 12px;display: flex;">
-                            <li class="breadcrumb-item active"><a href="index.php"><b>👋 Welcome Back, Name ...</b></a></li>
+                            <li class="breadcrumb-item active"><a href="<?= base_url('ltehome'); ?>"><b>👋 Welcome Back, <?= $this->session->userdata('user_full_name') ?> ...</b></a></li>
                         </div>
                     </ol>
                 </nav>

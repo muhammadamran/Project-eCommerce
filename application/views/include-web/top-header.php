@@ -80,10 +80,10 @@
                     </li>
                     <!-- END KERANJANG -->
                     <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
-                        <?php if ($this->session->userdata('username') != NULL) { ?>
+                        <?php if ($this->session->userdata('user_mail') != NULL) { ?>
                             <?php
                             $num_char = 12;
-                            $text = 'amran.siregar@kuehne-nagel.com';
+                            $text = $this->session->userdata('user_full_name');
                             ?>
                             <font style="color:#fff"><?= substr($text, 0, $num_char) . '...'; ?></font>
                         <?php } else { ?>
@@ -93,60 +93,20 @@
                                 <?php if ($this->session->userdata("role") == NULL) { ?>
                                     <div class="switcher-currency">
                                         <strong class="label switcher-label">
-                                            <span>SIGN IN</span>
+                                            <span>SIGN IN/SIGN OUT</span>
                                         </strong>
                                         <div class="switcher-options">
                                             <div class="switcher-currency-trigger">
                                                 <div class="setting__menu">
-                                                    <span><a data-toggle="modal" title="Sign In" href="#login">Sign In</a></span>
-                                                    <!-- <span><a data-toggle="modal" title="Create An Account" href="#daftar">Create An Account</a></span> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                                <?php if ($this->session->userdata("role") == 'Member') { ?>
-                                    <div class="switcher-currency">
-                                        <strong class="label switcher-label">
-                                            <span>My Account</span>
-                                        </strong>
-                                        <div class="switcher-options">
-                                            <div class="switcher-currency-trigger">
-                                                <div class="setting__menu">
-                                                    <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
-                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                                <?php if ($this->session->userdata("role") == 'Superadmin') { ?>
-                                    <div class="switcher-currency">
-                                        <strong class="label switcher-label">
-                                            <span>My Account</span>
-                                        </strong>
-                                        <div class="switcher-options">
-                                            <div class="switcher-currency-trigger">
-                                                <div class="setting__menu">
-                                                    <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
-                                                    <span><a href="<?= base_url() ?>home" target="_blank" title="Home">Admin LTE</a></span>
-                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                                <?php if ($this->session->userdata("role") == 'Admin') { ?>
-                                    <div class="switcher-currency">
-                                        <strong class="label switcher-label">
-                                            <span>My Account</span>
-                                        </strong>
-                                        <div class="switcher-options">
-                                            <div class="switcher-currency-trigger">
-                                                <div class="setting__menu">
-                                                    <span><a href="#"><?= $this->session->userdata("nama_depan"); ?> <?= $this->session->userdata("nama_belakang"); ?></a></span>
-                                                    <span><a href="<?= base_url() ?>home" target="_blank" title="Home">Admin LTE</a></span>
-                                                    <span><a href="<?= base_url() ?>whome/logout" title="Log Out">Log Out</a></span>
+                                                    <?php if ($this->session->userdata('user_mail') != NULL) { ?>
+                                                        <?php if ($this->session->userdata('user_role') == 1) { ?>
+                                                            <span><a href="<?= base_url() ?>ltehome" title="CMS System">CMS System</a></span>
+                                                        <?php } else { ?>
+                                                        <?php } ?>
+                                                        <span><a href="<?= base_url() ?>whome/logout" title="Sign Out">Sign Out</a></span>
+                                                    <?php } else { ?>
+                                                        <span><a data-toggle="modal" title="Sign In" href="#login">Sign In</a></span>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>

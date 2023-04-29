@@ -1,3 +1,10 @@
+<style>
+    .sidebar .nav>li.nav-profile .cover {
+        background: url(<?= base_url('assets/apps/background/background-sidebar.gif') ?>);
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+</style>
 <div id="sidebar" class="sidebar">
     <div data-scrollbar="true" data-height="100%">
         <ul class="nav">
@@ -8,8 +15,8 @@
                         <img src="<?= base_url('assets/lte/apps/user/male.jpg'); ?>" alt="Profile" />
                     </div>
                     <div class="info">
-                        <font style="text-transform: capitalize;">Name</font>
-                        <small>Job </small>
+                        <font style="text-transform: capitalize;"><?= $this->session->userdata('user_full_name') ?></font>
+                        <small><?= $this->session->userdata('user_dept') ?></small>
                     </div>
                 </a>
             </li>
@@ -17,14 +24,14 @@
         <ul class="nav">
             <li class="nav-header">Main</li>
             <li>
-                <a href="" target="_blank">
+                <a href="<?= base_url('whome'); ?>" target="_blank">
                     <i class="fa-solid fa-globe icon-page-sidebar"></i>
                     <span>Website</span>
                 </a>
             </li>
             <li class="nav-header">Navigation</li>
             <li class="<?= $this->uri->segment(1) == "ltehome" ? "active" : ""; ?>">
-                <a href="index.php">
+                <a href="<?= base_url('ltehome'); ?>">
                     <i class="fa-solid fa-cubes-stacked icon-page-sidebar"></i>
                     <span>Dashboard</span>
                 </a>
