@@ -61,24 +61,12 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-header">Point of Sale</li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <b class="caret"></b>
-                    <i class="fa-solid fa-cash-register icon-page-sidebar"></i>
-                    <span>Pos System
-                        <span class="label label-theme">
-                            Lock
-                        </span>
-                    </span>
+            <li class="nav-header">CMS Information</li>
+            <li class="">
+                <a href="<?= base_url('ltesetting'); ?>">
+                    <i class="fa-solid fa-gears icon-page-sidebar"></i>
+                    <span>Setting</span>
                 </a>
-                <ul class="sub-menu">
-                    <li><a href="#">Customer Order</a></li>
-                    <li><a href="#">Kitchen Order</a></li>
-                    <li><a href="#">Counter Checkout</a></li>
-                    <li><a href="#">Table Booking</a></li>
-                    <li><a href="#">Menu Stock</a></li>
-                </ul>
             </li>
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
         </ul>
