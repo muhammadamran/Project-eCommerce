@@ -30,11 +30,23 @@
                     <span>Website</span>
                 </a>
             </li>
+            <li>
+                <a href="http://127.0.0.1:8080/itimo" target="_blank">
+                    <i class="fa-solid fa-square-share-nodes icon-page-sidebar"></i>
+                    <span>IT IMO</span>
+                </a>
+            </li>
             <li class="nav-header">Navigation</li>
             <li class="<?= $this->uri->segment(1) == "ltehome" ? "active" : ""; ?>">
                 <a href="<?= base_url('ltehome'); ?>">
                     <i class="fa-solid fa-cubes-stacked icon-page-sidebar"></i>
                     <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="<?= $this->uri->segment(1) == "ltesubscribe" ? "active" : ""; ?>">
+                <a href="<?= base_url('ltesubscribe'); ?>">
+                    <i class="fa-solid fa-cash-register icon-page-sidebar"></i>
+                    <span>Order List</span>
                 </a>
             </li>
             <li class="has-sub <?= $this->uri->segment(1) == "lteproduct" ? "active" : ""; ?>">
@@ -46,11 +58,11 @@
                 <ul class="sub-menu">
                     <li class="<?= $this->uri->segment(2) == "lteporduct_post" ? "active" : ""; ?>">
                         <a href="<?= base_url('lteproduct/lteporduct_post'); ?>">
-                            Post
+                            Post List
                         </a>
                     </li>
-                    <li class="<?= $this->uri->segment(2) == "lteporduct_stocklist" ? "active" : ""; ?>">
-                        <a href="<?= base_url('lteproduct/lteporduct_stocklist'); ?>">
+                    <li class="<?= $this->uri->segment(2) == "lteporduct_stock" ? "active" : ""; ?>">
+                        <a href="<?= base_url('lteproduct/lteporduct_stock'); ?>">
                             Stock List
                         </a>
                     </li>
