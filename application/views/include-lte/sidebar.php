@@ -37,21 +37,21 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="has-sub ">
+            <li class="has-sub <?= $this->uri->segment(1) == "lteproduct" ? "active" : ""; ?>">
                 <a href="javascript:;">
                     <b class="caret"></b>
                     <i class="fa-solid fa-folder-tree icon-page-sidebar"></i>
                     <span>Product</span>
                 </a>
                 <ul class="sub-menu">
-                    <li>
-                        <a href="#">
+                    <li class="<?= $this->uri->segment(2) == "lteporduct_post" ? "active" : ""; ?>">
+                        <a href="<?= base_url('lteproduct/lteporduct_post'); ?>">
                             Post
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            Category
+                    <li class="<?= $this->uri->segment(2) == "lteporduct_stocklist" ? "active" : ""; ?>">
+                        <a href="<?= base_url('lteproduct/lteporduct_stocklist'); ?>">
+                            Stock List
                         </a>
                     </li>
                 </ul>

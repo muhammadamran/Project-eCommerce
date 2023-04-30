@@ -51,6 +51,7 @@
                                         <div>
                                             <div class="mini_action cart">
                                                 <a class="cart__btn_custom" href="<?= base_url('wcatalog'); ?>">Start Shopping</a>
+                                                <br><br>
                                             </div>
                                         </div>
                                     </div>

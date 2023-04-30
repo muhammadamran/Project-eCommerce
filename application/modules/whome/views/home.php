@@ -1,9 +1,16 @@
 <div style="margin-top:80px"></div>
 <div class="header">
-    <div class="section__title text-center">
-        <h2 style="color:#fff"><?= $web_banner_title ?></h2>
+    <div class="slide animation__style10 fullscreen align__center--left">
+        <div class="container">
+            <div class="slider__content">
+                <div class="contentbox">
+                    <h2><?= $web_banner_title ?></h2>
+                    <div style="display: flex;justify-content: center;"><?= $web_banner_paragraph ?></div>
+                    <a class="shopbtn" href="<?= base_url('wcatalog'); ?>">shop now</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <font style="font-size:18px"><?= $web_banner_paragraph ?></font>
 </div>
 <!-- New Product -->
 <section class="wn__product__area brown--color pt--80  pb--30">

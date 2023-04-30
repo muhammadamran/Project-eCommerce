@@ -4,13 +4,14 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="title">
-                    <h4>Subscribe</h4>
+                    <h4>Stock List</h4>
                 </div>
                 <nav aria-label="breadcrumb" role="navigation">
                     <ol class="breadcrumb">
                         <div style="font-size: 12px;display: flex;">
                             <li class="breadcrumb-item"><a href="<?= base_url('ltehome') ?>">Dashboard</a></li>
-                            <li class="breadcrumb-item active"><a href="#">Subscribe</a></li>
+                            <li class="breadcrumb-item "><a href="#">Product</a></li>
+                            <li class="breadcrumb-item active"><a href="#">Stock List</a></li>
                         </div>
                     </ol>
                 </nav>
@@ -24,8 +25,8 @@
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="#" class="nav-link active">
-                        <span class="d-sm-none">Subscribe</span>
-                        <span class="d-sm-block d-none">Subscribe</span>
+                        <span class="d-sm-none">Stock List</span>
+                        <span class="d-sm-block d-none">Stock List</span>
                     </a>
                 </li>
             </ul>

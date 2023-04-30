@@ -1161,7 +1161,7 @@ a {
 
 /* Height and width */
 .fullscreen {
-  min-height: 108vh;
+  min-height: 70vh;
   width: 100%;
 }
 
@@ -4661,10 +4661,10 @@ Slider Styles
 }
 
 .slide .slider__content p {
-  color: white;
-  font-size: 14px;
+  color: #3c3c3c;
+  font-size: 18px;
   line-height: 25px;
-  margin: 0 0 50px;
+  margin: 15px 0px 0px 0px;
   max-width: 725px;
 }
 
@@ -9194,7 +9194,7 @@ Footer Styles
 }
 
 .header {
-  padding: 160px;
+  padding: 65px;
   text-align: center;
   background: #1abc9c;
   color: white;
@@ -9207,7 +9207,7 @@ Footer Styles
 
 @media (max-width:606.5px) {
   .header {
-    padding: 60px;
+    padding: 25px;
     text-align: center;
     background: #1abc9c;
     color: white;
