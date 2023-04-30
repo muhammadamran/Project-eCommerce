@@ -37,30 +37,35 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="">
-                <a href="index.php?m=menu&s=index">
-                    <i class="fa-solid fa-folder-plus icon-page-sidebar"></i>
-                    <span>Menu</span>
-                </a>
-            </li>
             <li class="has-sub ">
                 <a href="javascript:;">
                     <b class="caret"></b>
                     <i class="fa-solid fa-folder-tree icon-page-sidebar"></i>
-                    <span>Content</span>
+                    <span>Product</span>
                 </a>
                 <ul class="sub-menu">
                     <li class="">
                         <a href="">
-                            Menu
+                            Summary
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            No data available
+                            Post
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Category
                         </a>
                     </li>
                 </ul>
+            </li>
+            <li class="<?= $this->uri->segment(1) == "ltesubscribe" ? "active" : ""; ?>">
+                <a href="<?= base_url('ltehome'); ?>">
+                    <i class="fa fa-comment-alt icon-page-sidebar"></i>
+                    <span>Subscribe</span>
+                </a>
             </li>
             <li class="nav-header">CMS Information</li>
             <li class="<?= $this->uri->segment(1) == "ltesetting" ? "active" : ""; ?>">

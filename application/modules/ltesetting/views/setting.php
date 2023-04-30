@@ -149,8 +149,8 @@
             <div class="row">
                 <!-- 1 -->
                 <div class="col-sm-12" style="margin-bottom: 15px;">
-                    <div style="padding: 5px 0px 5px 10px;background: #1d2226;color: white;border-radius: 3px 3px 0px 0px;">
-                        <font style="font-size: 20px;font-weight: 900;">
+                    <div style="padding: 11px 0px 11px 10px;background: #1d2226;color: white;border-radius: 3px 3px 0px 0px;">
+                        <font style="font-size: 12px;font-weight: 900;">
                             <i class="fa-solid fa-image"></i> Icon | Logo 1 | Logo 2
                         </font>
                     </div>
@@ -333,8 +333,8 @@
 
                 <!-- 2 -->
                 <div class="col-sm-12" style="margin-bottom: 15px;">
-                    <div style="padding: 5px 0px 5px 10px;background: #1d2226;color: white;border-radius: 3px 3px 0px 0px;">
-                        <font style="font-size: 20px;font-weight: 900;">
+                    <div style="padding: 11px 0px 11px 10px;background: #1d2226;color: white;border-radius: 3px 3px 0px 0px;">
+                        <font style="font-size: 12px;font-weight: 900;">
                             <i class="fa-solid fa-image"></i> Loader | Banner | Cover Product
                         </font>
                     </div>
