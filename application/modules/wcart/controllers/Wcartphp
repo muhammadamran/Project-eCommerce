@@ -1,13 +1,12 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Whome extends CI_Controller
+class Wcart extends CI_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Whome_model');
-		$this->load->model('wcart/Wcart_model');
+		$this->load->model('Wcart_model');
 		$this->load->model('Setting_model');
 		$this->load->model('Users_model');
 	}
@@ -73,13 +72,13 @@ class Whome extends CI_Controller
 		// End Cart
 
 		// Page
-		$x['page'] = 'Home';
+		$x['page'] = 'My Cart';
 		// End Page
 
 		$this->load->view('include-web/head', $x);
 		$this->load->view('include-web/alert', $x);
 		$this->load->view('include-web/top-header', $x);
-		$this->load->view('home', $x);
+		$this->load->view('cart', $x);
 		$this->load->view('include-web/footer', $x);
 		$this->load->view('include-web/login', $x);
 		$this->load->view('include-web/create', $x);

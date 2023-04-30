@@ -9231,3 +9231,25 @@ Footer Styles
   border-width: 1px 0px 0px;
   border-color: #ccc currentcolor;
 }
+
+.cart__btn_custom {
+    border: 1px solid #003369;
+    background: #003369;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 10px 30px;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.cart__btn_custom:hover {
+  border: 1px solid #0d2b4a;
+  background: #0d2b4a;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 10px 30px;
+  width: 100%;
+  transition: 0.4s;
+}

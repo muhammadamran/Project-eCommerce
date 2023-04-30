@@ -28,6 +28,11 @@
   <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
   <!-- HITUNG -->
 </head>
+<style>
+  .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?= base_url('assets/apps/banner/' . $web_banner); ?>');
+  }
+</style>
 <?php
 function buatRupiah($angka)
 {

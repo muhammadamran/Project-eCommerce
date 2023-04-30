@@ -35,95 +35,74 @@
                                 <div class="micart__close">
                                     <span>Close</span>
                                 </div>
-                                <div class="items-total d-flex justify-content-between">
-                                    <span> Count Items</span>
-                                    <span>Total Prices</span>
-                                </div>
-                                <div class="total_amount text-right">
-                                    <span>Price Rp.</span>
-                                </div>
-                                <div class="mini_action checkout">
-                                    <a class="checkout__btn" href="<?= base_url() . "w_checkout"; ?>">Checkout (0)</a>
-                                </div>
-                                <!-- if 1 = 160px; if 2 = 275px; if 3 = 325px; else = 400px; -->
-                                <div class="single__items" id="for-items" style="height: 325px;">
-                                    <div class="miniproduct">
-                                        <!-- VIEW KERANJANG -->
-                                        <!-- Sample -->
-                                        <div class="item01 d-flex" style="align-items: center;border-style: solid none;border-width: 0px 0px 1px 0px;border-color: #ccc currentcolor;">
-                                            <div class="thumb">
-                                                <a href="product-details.html">
-                                                    <img src="<?= base_url('assets/apps/background/background-sidebar.gif'); ?>" alt="product images">
-                                                </a>
+                                <?php if ($my_cart == NULL || $my_cart == 0) { ?>
+                                    <div>
+                                        <div>
+                                            <img src="<?= base_url('assets/apps/svg/no-data.svg'); ?>" alt="No Data Found">
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <font style="font-size:16px;font-weight:900;color:#003369;">Wow, your shopping cart is empty</font>
                                             </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Product Name</a></h6>
-                                                <span class="prize">Price</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Qty: </span>
-                                                    <span class="qun">Size: </span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li>
-                                                            <a href="" title="Hapus Item ()">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div>
+                                                <font style="font-size:12px;font-weight:500;color:#003369;">Come on, fill it with your dream items!</font>
                                             </div>
                                         </div>
-                                        <!-- Sample -->
-                                        <!-- Sample -->
-                                        <div class="item01 d-flex" style="align-items: center;border-style: solid none;border-width: 0px 0px 1px 0px;border-color: #ccc currentcolor;">
-                                            <div class="thumb">
-                                                <a href="product-details.html">
-                                                    <img src="<?= base_url('assets/apps/background/background-sidebar.gif'); ?>" alt="product images">
-                                                </a>
-                                            </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Product Name</a></h6>
-                                                <span class="prize">Price</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Qty: </span>
-                                                    <span class="qun">Size: </span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li>
-                                                            <a href="" title="Hapus Item ()">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                        <div>
+                                            <div class="mini_action cart">
+                                                <a class="cart__btn_custom" href="<?= base_url('wcatalog'); ?>">Start Shopping</a>
                                             </div>
                                         </div>
-                                        <!-- Sample -->
-                                        <!-- Sample -->
-                                        <div class="item01 d-flex" style="align-items: center;border-style: solid none;border-width: 0px 0px 1px 0px;border-color: #ccc currentcolor;">
-                                            <div class="thumb">
-                                                <a href="product-details.html">
-                                                    <img src="<?= base_url('assets/apps/background/background-sidebar.gif'); ?>" alt="product images">
-                                                </a>
-                                            </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Product Name</a></h6>
-                                                <span class="prize">Price</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Qty: </span>
-                                                    <span class="qun">Size: </span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li>
-                                                            <a href="" title="Hapus Item ()">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Sample -->
-                                        <!-- END VIEW KERANJANG -->
                                     </div>
-                                </div>
+                                <?php } else { ?>
+                                    <!-- Any Data -->
+                                    <div class="items-total d-flex justify-content-between">
+                                        <span> Count Items</span>
+                                        <span>Total Prices</span>
+                                    </div>
+                                    <div class="total_amount text-right">
+                                        <span>Price Rp.</span>
+                                    </div>
+                                    <div class="mini_action checkout">
+                                        <a class="checkout__btn" href="<?= base_url() . "w_checkout"; ?>">Checkout (0)</a>
+                                    </div>
+                                    <!-- if 1 = 160px; if 2 = 275px; if 3 = 325px; else = 400px; -->
+                                    <div class="single__items" id="for-items" style="height: 325px;">
+                                        <div class="miniproduct">
+                                            <!-- VIEW KERANJANG -->
+                                            <?php
+                                            foreach ($dataCart as $rowCart) {
+                                            ?>
+                                                <!-- Cart -->
+                                                <div class="item01 d-flex" style="align-items: center;border-style: solid none;border-width: 0px 0px 1px 0px;border-color: #ccc currentcolor;">
+                                                    <div class="thumb">
+                                                        <a href="product-details.html">
+                                                            <img src="<?= base_url('assets/apps/background/background-sidebar.gif'); ?>" alt="product images">
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h6><a href="product-details.html">Product Name</a></h6>
+                                                        <span class="prize">Price</span>
+                                                        <div class="product_prize d-flex justify-content-between">
+                                                            <span class="qun">Qty: </span>
+                                                            <span class="qun">Size: </span>
+                                                            <ul class="d-flex justify-content-end">
+                                                                <li>
+                                                                    <a href="" title="Hapus Item ()">
+                                                                        <i class="zmdi zmdi-delete"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Cart -->
+                                            <?php } ?>
+                                            <!-- END VIEW KERANJANG -->
+                                        </div>
+                                    </div>
+                                    <!-- End Any Data -->
+                                <?php } ?>
                             </div>
                         </div>
                     </li>
