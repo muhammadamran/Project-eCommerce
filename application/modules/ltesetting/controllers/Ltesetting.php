@@ -8,7 +8,6 @@ class Ltesetting extends CI_Controller
 		parent::__construct();
 		$this->load->model('Ltesetting_model');
 		$this->load->model('Setting_model');
-		$this->load->model('Ltesetting_model');
 		$this->load->model('Users_model');
 	}
 	public function index()
@@ -63,9 +62,6 @@ class Ltesetting extends CI_Controller
 			$x['page'] = 'Setting';
 			// End Page
 
-			$dataUsers = $this->Users_model->get_users();
-			$x['data'] = $dataUsers;
-
 			$this->load->view('include-lte/head', $x);
 			$this->load->view('include-web/alert', $x);
 			// $this->load->view('include-lte/cssTable', $x);
@@ -74,8 +70,8 @@ class Ltesetting extends CI_Controller
 			$this->load->view('setting', $x);
 			$this->load->view('include-lte/activity', $x);
 			$this->load->view('include-lte/panel', $x);
-			// $this->load->view('include-lte/jsTable', $x);
 			$this->load->view('include-lte/footer', $x);
+			// $this->load->view('include-lte/jsTable', $x);
 		} else {
 			$this->session->set_flashdata("start_session", "You didn't have access!");
 			redirect("whome");

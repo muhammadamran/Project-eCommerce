@@ -44,11 +44,6 @@
                     <span>Product</span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="">
-                        <a href="">
-                            Summary
-                        </a>
-                    </li>
                     <li>
                         <a href="#">
                             Post
@@ -62,7 +57,7 @@
                 </ul>
             </li>
             <li class="<?= $this->uri->segment(1) == "ltesubscribe" ? "active" : ""; ?>">
-                <a href="<?= base_url('ltehome'); ?>">
+                <a href="<?= base_url('ltesubscribe'); ?>">
                     <i class="fa fa-comment-alt icon-page-sidebar"></i>
                     <span>Subscribe</span>
                 </a>
