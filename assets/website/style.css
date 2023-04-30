@@ -2466,10 +2466,10 @@ Cart Box Styles
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  border-color: #ccc currentcolor;
+  /* border-color: #ccc currentcolor; */
   -o-border-image: none;
   border-image: none;
-  border-style: solid none;
+  /* border-style: solid none; */
   border-width: 1px 0;
   margin: 20px -20px 0;
   overflow-x: auto;
@@ -9221,4 +9221,13 @@ Footer Styles
 
 .content {
   padding: 20px;
+}
+
+#for-items {
+  display: block;
+  /* height: 400px; */
+  overflow: auto;
+  border-style: solid none;
+  border-width: 1px 0px 0px;
+  border-color: #ccc currentcolor;
 }
