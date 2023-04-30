@@ -115,3 +115,17 @@
 		});
 	</script>
 <?php endif; ?>
+<!-- subscribe_success -->
+<?php if ($this->session->flashdata('subscribe_success')) : ?>
+	<script>
+		Swal.fire({
+			title: 'Information!',
+			html: '<font style="font-size: 16px;font-weight: 400;">Thanks for your Subscribe, we will send our update to your email 🌟</font>',
+			imageUrl: '<?= base_url('assets/apps/alert/send2.gif') ?>',
+			// icon: 'success',
+			// imageWidth: 400,
+			imageHeight: 200,
+			// imageAlt: 'Custom image',
+		});
+	</script>
+<?php endif; ?>

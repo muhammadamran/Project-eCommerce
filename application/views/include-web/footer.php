@@ -12,7 +12,7 @@
 						}
 					</style>
 					<div id="must" style="color:#fff !important"><?= $web_subscribe_paragraph ?></div>
-					<form action="#">
+					<form action="<?= base_url('Subscribe/subscribe_add'); ?>" method="POST">
 						<div class="newsletter__box">
 							<style>
 								#Subscribe::placeholder {
@@ -20,7 +20,9 @@
 									opacity: 1;
 								}
 							</style>
-							<input type="email" style="color:#fff" id="Subscribe" placeholder="Enter your e-mail" required>
+							<input type="email" style="color:#fff" name="Subscribe" id="Subscribe" placeholder="Enter your e-mail" required>
+							<input type="hidden" style="color:#fff" name="URL" id="URL" value="<?= $this->uri->segment(1) ?>">
+							<textarea hidden class="form-control" name="location" id="mylocation"></textarea>
 							<button style="color:#fff">Subscribe</button>
 						</div>
 					</form>
@@ -81,7 +83,19 @@
 <script>
 	$(document).ready(function() {
 		$(".preloader").fadeOut();
-	})
+	});
+
+	// Location
+	var x = document.getElementById("mylocation");
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition);
+	} else {
+		x.innerHTML = "Geolocation is not supported by this browser.";
+	}
+
+	function showPosition(position) {
+		x.innerHTML = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+	}
 </script>
 </body>
 
